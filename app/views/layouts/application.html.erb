@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="<%=I18n.locale%>" class="<%=I18n.locale%>" dir="<%=I18n.locale == :en ? 'ltr' : 'rtl'%>">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : t("common.title") %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class="top-bar">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon dark" type="button" data-toggle></button>
+    </span>
+    <strong><%=t "common.title"%></strong>
+  </div>
+  <div id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <% if user_signed_in? %>
+            <li><%=link_to t("users.logout"), destroy_user_session_path, method: :delete%></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= display_flash_messages %>
+<div class="content-background">
+  <div class="pattern">
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.ar {
+  .top-bar-title {
+    float: right;
+  }
+  .flash{
+    .close-button{
+      position: absolute;
+      left: 10px;
+    }
+  }
+}
+
+.top-bar{
+  background-color: rgba(0,0,0,0.83);
+  border-bottom: 1px solid #3E3E40;
+  color: #DFDFDF;
+}
+
+.content-background{
+  background: linear-gradient(to right, #1A6325 0%, #4F9C45 20%, #4F9C45 80%, #1A6325 100%);
+  .pattern {
+    background: url(background-grid.png) repeat;
+    height:100%;
+  }
+}
