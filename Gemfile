@@ -10,7 +10,6 @@ gem 'pg'
 
 gem 'devise'
 
-gem 'devise-foundation-views'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -26,9 +25,9 @@ gem 'turbolinks'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-#foundation
-gem 'foundation-rails'
-gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper', branch: 'foundation-6'
+#bootstrap
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 
 #i18n full support
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x

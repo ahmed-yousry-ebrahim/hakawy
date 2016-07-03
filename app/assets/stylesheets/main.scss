@@ -1,6 +1,8 @@
 .ar {
-  .top-bar-title {
-    float: right;
+  .navbar-static-top {
+    .navbar-brand {
+      float: right;
+    }
   }
   .flash{
     .close-button{
@@ -10,10 +12,13 @@
   }
 }
 
-.top-bar{
+.navbar-static-top{
   background-color: rgba(0,0,0,0.83);
   border-bottom: 1px solid #3E3E40;
   color: #DFDFDF;
+  .container{
+    height:90px;
+  }
 }
 
 .content-background{

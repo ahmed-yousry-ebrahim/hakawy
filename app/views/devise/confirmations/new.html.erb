@@ -1,25 +1,18 @@
-<%= foundation_devise_error_messages! %>
-<div class="row">
-	<div class="medium-6 medium-centered columns">
-	  <div class="login-box">
-		  <div class="row">
-		    <div class="large-12 columns">
-		      <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post}) do |f| %>
-		        <div class="row">
-		          <h5 class="text-center">
-		          	<%= t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions') %>
-		          </h5>
-		      	</div>
-		      	<div class="row">
-		        	<%= f.email_field :email, autofocus: true, class: "large-12 columns", placeholder: "Email"%>
-		      	</div>
-		      	<div class="row">
-		        	<%= f.submit t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions'), class: "button expand large-12 large-centered columns" %>
-		      	</div>
-		      <% end %>
-		  	</div>
-	  		<%= render "devise/shared/links" %>
-			</div>
-		</div>
-	</div>
+<%= bootstrap_devise_error_messages! %>
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+    <h4><%= t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions') %></h4>
+  </div>
+  <div class="panel-body">
+    <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post, role: "form" }) do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, class: "form-control"  %>
+      </div>
+
+      <%= f.submit t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions'), class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
+
+<%= render "devise/shared/links" %>

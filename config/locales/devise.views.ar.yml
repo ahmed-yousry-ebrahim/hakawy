@@ -100,6 +100,8 @@
       not_saved:
         one: "يوجد خطأ واحد منع هذا %{resource} من الحفظ:"
         other: "%{count} من الأخطاء منعت هذا %{resource} من الحفظ:"
+        few: "%{count} من الأخطاء منعت هذا %{resource} من الحفظ:"
+        many: "%{count} من الأخطاء منعت هذا %{resource} من الحفظ:"
   activerecord:
     models:
       user: "مستخدم"
@@ -112,5 +114,4 @@
         password_confirmation: "تأكيد كلمة المرور"
         remember_me: "تذكرنى"
         last_sign_in_at: "تسجيل الدخول الأخير عند"
-
 
